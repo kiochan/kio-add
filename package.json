@@ -1,0 +1,23 @@
+{
+  "name": "kio-add",
+  "version": "1.0.0",
+  "description": "a demo lib implementation for add function",
+  "main": "dist/main/index",
+  "module": "dist/esm/index",
+  "types": "dist/types/index",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean:dist && yarn compile",
+    "clean:dist": "rm -rf ./dist",
+    "compile": "tsc -p tsconfig.json && tsc -p tsconfig.build.json",
+    "prepublishOnly": "yarn build"
+  },
+  "repository": "https://github.com/kiochan/kio-add.git",
+  "author": "kiochan <sunxingchen@live.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
